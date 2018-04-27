@@ -1,0 +1,13 @@
+[Unit]
+Description=The WatchDog
+
+[Service]
+Type=notify
+User=zzs
+ExecStart=/usr/bin/WatchDog
+Restart=on-failure
+WatchdogSec=2s
+NotifyAccess=main
+
+[Install]
+WantedBy=multi-user.target
